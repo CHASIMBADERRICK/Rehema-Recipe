@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <h3>Vegan</h3>
+    <div class="row">
+        {% for vegan in vegan %}
+            <div class =col>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ vegan.Image.url }}" class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                        <h5 class="card-title">{{vegan.Title }}</h5>
+                        <p class="card-text">{{ vegan.Description|truncatewords:10 }}</p>
+                        <a href="{% url 'single_vegan' vegan.id %}" class="btn btn-primary">Full Detail</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    
+{% endblock content %}

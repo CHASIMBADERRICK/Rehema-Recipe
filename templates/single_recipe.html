@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <h3>Single Recipe</h3>
+    <div class="row">
+
+            <div class =col>
+
+                <div class="card" style="width: 40rem;">
+                    <img src="{{ single.Image.url }}" class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                        <h3 class="card-title">{{single.Title }}</h3>
+                        <p class="card-text">{{ single.Description}}</p>
+                        <h4>Ingredients</h4>
+                        <p class="card-text">{{ single.Ingredients }}</p>
+                        <h4>Instructions</h4>
+                        <p class="card-text">{{ single.Instructions }}</p>
+                        <h4>PrepTime</h4>
+                        <p class="card-text">{{ single.PrepTime}}</p>
+                        <h4>CookTime</h4>
+                        <p class="card-text">{{ single.CookTime}}</p>
+                        <h4>Servings</h4>
+                        <p class="card-text">{{ single.Servings}}</p>
+                
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    
+{% endblock content %}

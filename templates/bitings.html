@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <h3>Bitings</h3>
+    <div class="row">
+        {% for bitings in bitings %}
+            <div class =col>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ bitings.Image.url }}" class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                        <h5 class="card-title">{{bitings.Title }}</h5>
+                        <p class="card-text">{{ bitings.Description|truncatewords:10 }}</p>
+                        <a href="{% url 'single_bitings' bitings.id %}" class="btn btn-primary">Full Detail</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    
+    
+{% endblock content %}

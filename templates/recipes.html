@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <h3>Recipes</h3>
+    <div class="row">
+        {% for recipe in recipes %}
+            <div class =col>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ recipe.Image.url }}" class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                        <h5 class="card-title">{{recipe.Title }}</h5>
+                        <p class="card-text">{{ recipe.Description|truncatewords:10 }}</p>
+                        <a href="{% url 'single_recipe' recipe.id %}" class="btn btn-primary">Full Detail</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    
+    
+{% endblock content %}

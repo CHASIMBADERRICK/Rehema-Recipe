@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <h3>Lunch</h3>
+    <div class="row">
+        {% for lunch in lunch %}
+            <div class =col>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ lunch.Image.url }}" class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                        <h5 class="card-title">{{lunch.Title }}</h5>
+                        <p class="card-text">{{ lunch.Description|truncatewords:10 }}</p>
+                        <a href="{% url 'single_lunch' lunch.id %}" class="btn btn-primary">Full Detail</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    
+    
+{% endblock content %}

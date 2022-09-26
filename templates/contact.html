@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <div style="margin:100px">
+        <h1>Contact</h1>
+        <h4>Contact us directly if you have any questions for more information.</h4>
+        <p>
+            Please write your name, email address and a message below if you have any questions for more information.
+            One of our staff members will be happy to contact you directly and will answer your questions as soon as possible.
+        </p>
+        <form method="post">
+
+        {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Submit</button>
+
+        </form>
+    </div> 
+{% endblock content %}

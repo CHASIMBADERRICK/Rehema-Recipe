@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <h3>Fish</h3>
+    <div class="row">
+        {% for fish in fish %}
+            <div class =col>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ fish.Image.url }}" class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                        <h5 class="card-title">{{fish.Title }}</h5>
+                        <p class="card-text">{{ fish.Description|truncatewords:10 }}</p>
+                        <a href="{% url 'single_fish' fish.id %}" class="btn btn-primary">Full Detail</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    
+    
+{% endblock content %}

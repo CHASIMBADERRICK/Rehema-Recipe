@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RemaRecipes || Final</title>
+
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" /> -->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+
+        <style>
+            .navbar-nav.navbar-center {
+                position: absolute;
+                left: 50%;
+                transform: translatex(-50%);
+            }
+        </style>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/about">RemaRecipes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/health">Health</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="recipes" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Recipes
+                </a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/breakfast">Breakfast</a></li>
+                    <!-- <li></li><a class="dropdown-item" href="/meal">Main Meal</a></li> -->
+                    <li></li><a class="dropdown-item" href="/bitings">Bitings</a></li>
+                    <li></li><a class="dropdown-item" href="/starch">Starch</a></li>
+                    <li></li><a class="dropdown-item" href="/vegan">Vegan</a></li>
+                    <li></li><a class="dropdown-item" href="/bakery">Patries and Bakery</a></li>
+                    <!-- <li></li><a class="dropdown-item" href="/lunch">Lunch</a></li> -->
+                    <!-- <li></li><a class="dropdown-item" href="/dinner">Dinner</a></li> -->
+                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="/meals">Main Meals</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/meat">Meat</a></li>
+                            <li><a class="dropdown-item" href="/fish">Fish</a></li>
+                        </ul>
+                </li>
+
+                </ul>
+                </div>
+                </li>
+                <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+                </li> -->
+            </ul>
+            <div class="nav-link contact-link">
+                <a href="{% url 'contact' %}" class="btn"> contact </a>
+                <!-- <a class="nav-link" href="/contact">Contact</a> -->
+            </div>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+            </div>
+        </nav>
+        <hr> 
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Recipes..." aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search </button>
+        </form>
+        <hr>
+    <div class="container">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+    
+</body>
+</html>

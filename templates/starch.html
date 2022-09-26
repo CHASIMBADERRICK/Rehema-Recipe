@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <h3>Starch</h3>
+    <div class="row">
+        {% for starch in starch %}
+            <div class =col>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ starch.Image.url }}" class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                        <h5 class="card-title">{{starch.Title }}</h5>
+                        <p class="card-text">{{ starch.Description|truncatewords:10 }}</p>
+                        <a href="{% url 'single_starch' starch.id %}" class="btn btn-primary">Full Detail</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+    
+{% endblock content %}
