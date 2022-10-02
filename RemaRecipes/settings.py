@@ -133,6 +133,7 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = '/Images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/Images/Images')
+
 django_heroku.settings(locals())
 
 # Default primary key field type
