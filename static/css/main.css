@@ -829,3 +829,17 @@ nav-area ul li:hover > ul{
     text-decoration: underline;
     transform: rotate(-90deg);
 } 
+
+/* .logo {
+    width: 230px;
+    height: 127px;
+    
+    margin: 6px;
+    border-radius: 5%;
+    
+} */
+
+.navbar-brand{
+    border-color: burgundy;
+    text-color: burgundy;
+}

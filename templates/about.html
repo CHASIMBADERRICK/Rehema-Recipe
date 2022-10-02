@@ -2,21 +2,45 @@
 {% load static %}
 {% block content %}
 
-    <h3>About Page</h3>
-    <div class="row">
-        {% for about in about %}
-            <div class =col>
+    <h1 text align="center">About Page</h1>
 
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ about.Image.url }}" class="card-img-top" alt="..."/>
-                    <div class="card-body">
-                        <h5 class="card-title">{{bakery.Title }}</h5>
-                        <p class="card-text">{{ bakery.Description|truncatewords:10 }}</p>
-                        <a href="{% url 'single_bakery' bakery.id %}" class="btn btn-primary">Full Detail</a>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
+    <img src="https://www.w3schools.com/w3images/hamburger.jpg" class="img-fluid" alt="...">
+
+    <img src="https://www.w3schools.com/w3images/tablesetting2.jpg" class="img-fluid" alt="...">
+
+    <img src="https://www.w3schools.com/w3images/tablesetting.jpg" class="img-fluid" alt="...">
+
+    
+
+    <div class="w3-col m6 w3-padding-larger">
+        <h1 text align="center">About Remarecipes</h1>
+        <p class align="center"> "Established in 2022, RemaRecipes.net is a family-friendly food blog dedicated to sharing very nice and admirable recipes for everyday cooking as well as entertaining. You’ll find over hundreds of the very best and easy recipes with nutrition, ratings, and big, beautiful images." </p>
+        <p></p>
+
+        <div class="w3-col l6 w3-padding-large">
+            <h1 class="w3-center">Our Menu</h1><br>
+            <h4>Bread Basket</h4>
+            <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+        
+            <h4>Honey Almond Granola with Fruits</h4>
+            <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+        
+            <h4>Belgian Waffle</h4>
+            <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+        
+            <h4>Scrambled eggs</h4>
+            <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+        
+            <h4>Blueberry Pancakes</h4>
+            <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>    
+        </div>
+    
+
+    
+
+    
+
+
     </div>
     
     

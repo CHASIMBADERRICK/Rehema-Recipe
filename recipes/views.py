@@ -38,6 +38,11 @@ def breakfast(request):
     context = {'breakfast':breakfast}
     return render(request, "breakfast.html", context)
 
+def chicken(request):
+    chicken = Chicken.objects.all()
+    context = {'chicken':chicken}
+    return render(request, "chicken.html", context)
+
 def meal(request):
     meal = Meal.objects.all()
     context = {'meal':meal}
@@ -129,6 +134,11 @@ def single_meat(request, id):
 
 def single_fish(request, id):
     single = Fish.objects.get(id=id)
+    context = {'single':single}
+    return render(request, "single_recipe.html", context)
+
+def single_chicken(request, id):
+    single = Chicken.objects.get(id=id)
     context = {'single':single}
     return render(request, "single_recipe.html", context)
 

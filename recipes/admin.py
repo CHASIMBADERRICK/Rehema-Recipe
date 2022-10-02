@@ -3,7 +3,7 @@ from .models import *
 
 admin.site.register(Recipe)
 admin.site.register(Breakfast)
-admin.site.register(Meals)
+admin.site.register(Chicken)
 admin.site.register(Bitings)
 admin.site.register(Starch)
 admin.site.register(Vegan)

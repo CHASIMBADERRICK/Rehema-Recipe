@@ -20,6 +20,7 @@ urlpatterns = [
     path("meals/", views.meals, name="meals"),
     path("meat/", views.meat, name="meat"),
     path("fish/", views.fish, name="fish"),
+    path("chicken/", views.chicken, name="chicken"),
     path("health/", views.health, name="health"),
     path("single_recipe/<int:id>/", views.single_recipe, name="single_recipe"),
     path("contact/", views.contact, name="contact"),
@@ -32,4 +33,5 @@ urlpatterns = [
     path("single_meat/<int:id>/", views.single_meat, name="single_meat"),
     path("single_meal/<int:id>/", views.single_meal, name="single_meal"),
     path("single_vegan/<int:id>/", views.single_vegan, name="single_vegan"),
+    path("single_chicken/<int:id>/", views.single_chicken,name="single_chicken"),
 ]

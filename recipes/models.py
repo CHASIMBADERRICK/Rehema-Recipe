@@ -26,7 +26,7 @@ class Breakfast(models.Model):
     Quantity = models.IntegerField()
 
 
-class Meals(models.Model):
+class Chicken(models.Model):
     Title = models.CharField(max_length=255)
     Image = models.ImageField(max_length=2083)
     Description = models.TextField()
